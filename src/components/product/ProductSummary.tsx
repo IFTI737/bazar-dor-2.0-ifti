@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { ChangeText } from "./ChangeBadge";
 import type { Product } from "@/types/bazardor";
-import { formatPrice, unitBn } from "@/lib/utils";
+import { formatPct, formatPrice, unitBn } from "@/lib/utils";
 
 const changeWord = { up: "বেড়েছে", down: "কমেছে", flat: "অপরিবর্তিত" };
 
 const ProductSummary = ({ product }: { product: Product }) => {
   const unit = unitBn(product.unit);
-  const diff = Math.abs(product.today - product.yesterday);
 
   return (
     <div className="card border border-base-300 bg-base-100 p-5">
@@ -24,8 +23,10 @@ const ProductSummary = ({ product }: { product: Product }) => {
           </p>
           <p className="mt-2 text-sm">
             গতকালের তুলনায় আজ দাম{" "}
-            <span className="font-semibold">{changeWord[product.change.dir]}</span>
-            {diff > 0 && ` · ${formatPrice(diff)} টাকা`}
+            <span className="font-semibold">
+              {changeWord[product.change.dir]}
+              {product.change.dir !== "flat" && ` ${formatPct(product.change.pct)}`}
+            </span>
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
             <Link
