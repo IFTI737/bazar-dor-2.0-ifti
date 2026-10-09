@@ -13,7 +13,7 @@ const SignInForm = () => {
   const redirectTo = searchParams.get("redirect") || "/";
   const [loading, setLoading] = useState(false);
 
-  // the proxy sends users here with ?redirect=... when they open a private page
+  
   useEffect(() => {
     if (searchParams.get("redirect")) {
       toast.error("এই পেজটি দেখতে আগে সাইন ইন করুন", { id: "auth-required" });
