@@ -10,7 +10,7 @@ BazarDor is a Bangla market-price tracker for everyday essentials, built for Pro
 2. **Today's movers** – the top 6 risers and top 6 fallers of the day, colour coded (red for rising, green for falling, gray for no change).
 3. **Category pages** – each category (`/category/chal`, `/category/mosla` …) lists its products with a sort dropdown that sorts by numeric price, Bengali numerals included.
 4. **Product details** – `/product/[slug]` shows the market summary, minimum/maximum/average price and a market-by-market price table across 12 bazars.
-5. **Bengali-first UI** – Bengali digits (`১,৮৫০ টাকা`), Bangla date in the navbar, Hind Siliguri font, skeleton loaders and friendly 404 pages with a “হোম পেজে ফিরে যান” button.
+5. **Bengali-first UI** – Bengali digits (`১,৮৫০ টাকা`), Bangla date in the navbar, system Bangla font (same as the demo), skeleton loaders and friendly 404 pages with a “হোম পেজে ফিরে যান” button.
 6. **Fully responsive** – mobile, tablet and desktop layouts with a scrollable category bar and stacking hero.
 
 ## 🛠️ Technologies

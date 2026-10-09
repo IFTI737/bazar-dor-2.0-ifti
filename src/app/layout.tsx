@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Hind_Siliguri } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Marquee from "@/components/shared/Marquee";
 import Footer from "@/components/shared/Footer";
-
-const hindSiliguri = Hind_Siliguri({
-  variable: "--font-hind-siliguri",
-  subsets: ["bengali", "latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   title: "বাজার দর — আজকের বাজারের দাম",
@@ -24,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="bn"
       data-theme="bazardor"
-      className={`${hindSiliguri.variable} h-full antialiased`}
+      className="h-full antialiased"
     >
       <body className="flex min-h-full flex-col bg-base-200 text-base-content">
         <Header />
