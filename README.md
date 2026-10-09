@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 বাজার দর (BazarDor)
 
-## Getting Started
+বাজার দর হলো একটি Next.js ওয়েব অ্যাপ, যেখানে চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলার আজকের বাজারদর এক নজরে দেখা যায়। প্রতিটি পণ্যের দাম বাজারভিত্তিকভাবে (সর্বনিম্ন, সর্বাধিক, গড়) তুলনা করা যায় এবং গতকালের তুলনায় দাম বেড়েছে না কমেছে তা রঙ দিয়ে দেখানো হয়।
 
-First, run the development server:
+BazarDor is a Bangla market-price tracker for everyday essentials, built for Programming Hero Assignment 07 (B14-A7).
+
+## ✨ Features
+
+1. **Live price ticker** – an infinite marquee under the navbar showing every product's emoji, name, price per unit and ▲/▼ change.
+2. **Today's movers** – the top 6 risers and top 6 fallers of the day, colour coded (red for rising, green for falling, gray for no change).
+3. **Category pages** – each category (`/category/chal`, `/category/mosla` …) lists its products with a sort dropdown that sorts by numeric price, Bengali numerals included.
+4. **Product details** – `/product/[slug]` shows the market summary, minimum/maximum/average price and a market-by-market price table across 12 bazars.
+5. **Bengali-first UI** – Bengali digits (`১,৮৫০ টাকা`), Bangla date in the navbar, Hind Siliguri font, skeleton loaders and friendly 404 pages with a “হোম পেজে ফিরে যান” button.
+6. **Fully responsive** – mobile, tablet and desktop layouts with a scrollable category bar and stacking hero.
+
+## 🛠️ Technologies
+
+- [Next.js 16](https://nextjs.org) (App Router, Cache Components, Turbopack)
+- React 19 + TypeScript
+- Tailwind CSS 4 + [daisyUI 5](https://daisyui.com)
+- [react-marquee-text](https://www.npmjs.com/package/react-marquee-text) for the price ticker
+- [Better Auth](https://better-auth.com) with MongoDB (email/password, Google, GitHub) — in progress
+- react-hot-toast
+
+## 📡 API
+
+Data comes from `https://api.abcz.workers.dev/api/bazardor` (`/products`, `/products?category=chal`, `/categories`).
+
+## 🚀 Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Copy `.env.example` to `.env.local` and fill in the values when authentication is enabled.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔗 Links
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Live Link:
+- GitHub Repository: https://github.com/IFTI737/bazar-dor-2.0-ifti
