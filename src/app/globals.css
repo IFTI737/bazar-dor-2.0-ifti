@@ -36,14 +36,6 @@
   --noise: 0;
 }
 
-@theme inline {
-  --font-sans: var(--font-hind-siliguri);
-}
-
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-hind-siliguri), sans-serif;
 }
