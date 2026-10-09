@@ -108,11 +108,11 @@ Then run:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [https://bazar-dor-2-0-ifti.vercel.app/](https://bazar-dor-2-0-ifti.vercel.app/).
 
 ## 🔗 Links
 
-- **Live Site:** _add your Vercel URL here_
+- **Live Site:** [add your Vercel URL here](https://bazar-dor-2-0-ifti.vercel.app/)
 - **Repository:** https://github.com/IFTI737/bazar-dor-2.0
 
 ---
