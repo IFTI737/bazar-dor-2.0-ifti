@@ -1,4 +1,4 @@
-import CategorySkeleton from "@/components/CategorySkeleton";
+import CategorySkeleton from "@/components/category/CategorySkeleton";
 
 const Loading = () => <CategorySkeleton />;
 

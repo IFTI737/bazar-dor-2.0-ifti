@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Category } from "@/lib/types";
+import type { Category } from "@/types/bazardor";
 
 const NavList = ({
   categories,

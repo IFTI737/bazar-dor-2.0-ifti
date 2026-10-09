@@ -1,7 +1,7 @@
 import { cacheLife } from "next/cache";
-import type { Category, Product } from "./types";
+import type { Category, Product } from "@/types/bazardor";
 
-// BASE_URL_2 from the assignment README
+
 const BASE_URL =
   process.env.BAZARDOR_API_URL ?? "https://api.abcz.workers.dev/api/bazardor";
 

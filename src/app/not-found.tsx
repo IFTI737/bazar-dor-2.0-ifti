@@ -1,4 +1,4 @@
-import NotFoundMessage from "@/components/NotFoundMessage";
+import NotFoundMessage from "@/components/ui/NotFoundMessage";
 
 const NotFound = () => {
   return <NotFoundMessage />;

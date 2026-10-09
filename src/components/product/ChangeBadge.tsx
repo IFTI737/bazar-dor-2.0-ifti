@@ -1,4 +1,4 @@
-import type { Product } from "@/lib/types";
+import type { Product } from "@/types/bazardor";
 import { formatPct } from "@/lib/utils";
 
 const styles = {

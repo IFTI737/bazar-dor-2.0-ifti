@@ -1,10 +1,10 @@
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
-import SortableProducts from "@/components/SortableProducts";
-import CategorySkeleton from "@/components/CategorySkeleton";
-import NotFoundMessage from "@/components/NotFoundMessage";
+import SortableProducts from "@/components/product/SortableProducts";
+import CategoryHeader from "@/components/category/CategoryHeader";
+import CategorySkeleton from "@/components/category/CategorySkeleton";
+import NotFoundMessage from "@/components/ui/NotFoundMessage";
 import { getCategories, getCategory, getProductsByCategory } from "@/lib/api";
-import { toBn } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const categories = await getCategories();
@@ -34,15 +34,7 @@ const CategoryProducts = async ({
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="card flex-row items-center gap-3 border border-base-300 bg-base-100 p-5">
-        <span className="text-4xl">{category.icon}</span>
-        <div>
-          <h1 className="text-2xl leading-8 font-bold">{category.nameBn}</h1>
-          <p className="text-sm text-base-content/70">
-            {toBn(products.length)}টি পণ্যের আজকের দাম ও পরিবর্তন
-          </p>
-        </div>
-      </div>
+      <CategoryHeader category={category} count={products.length} />
 
       {products.length ? (
         <SortableProducts products={products} />

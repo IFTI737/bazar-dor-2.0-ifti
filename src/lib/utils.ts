@@ -1,3 +1,5 @@
+import type { Market } from "@/types/bazardor";
+
 const bnDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
 
 export const toBn = (value: number | string) =>
@@ -32,3 +34,9 @@ const units: Record<string, string> = {
 };
 
 export const unitBn = (unit: string) => units[unit] ?? unit;
+
+// Adds each market's average price and sorts the markets from cheapest to costliest
+export const getMarketPrices = (markets: Market[]) =>
+  markets
+    .map((m) => ({ ...m, avg: (m.min + m.max) / 2 }))
+    .sort((a, b) => a.avg - b.avg);

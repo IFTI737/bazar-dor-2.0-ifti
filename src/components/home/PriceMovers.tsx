@@ -1,5 +1,5 @@
-import ProductCard from "./ProductCard";
-import type { Product } from "@/lib/types";
+import ProductCard from "@/components/product/ProductCard";
+import type { Product } from "@/types/bazardor";
 
 const PriceMovers = ({
   products,

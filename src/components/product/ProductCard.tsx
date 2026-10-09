@@ -1,6 +1,6 @@
 import Link from "next/link";
 import ChangeBadge from "./ChangeBadge";
-import type { Product } from "@/lib/types";
+import type { Product } from "@/types/bazardor";
 import { formatPrice, unitBn } from "@/lib/utils";
 
 const ProductCard = ({ product }: { product: Product }) => {
