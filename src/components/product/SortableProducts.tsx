@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import ProductCard from "./ProductCard";
-import type { Product } from "@/lib/types";
+import type { Product } from "@/types/bazardor";
 import { bnToNumber, toBn } from "@/lib/utils";
 
 type SortOrder = "default" | "asc" | "desc";

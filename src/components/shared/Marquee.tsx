@@ -1,7 +1,7 @@
 import Link from "next/link";
 import MarqueeText from "react-marquee-text";
 import "react-marquee-text/dist/styles.css";
-import { ChangeText } from "./ChangeBadge";
+import { ChangeText } from "@/components/product/ChangeBadge";
 import { getProducts } from "@/lib/api";
 import { formatPrice, unitBn } from "@/lib/utils";
 

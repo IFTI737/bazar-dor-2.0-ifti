@@ -1,4 +1,4 @@
-import ProductGridSkeleton from "./ProductGridSkeleton";
+import ProductGridSkeleton from "@/components/product/ProductGridSkeleton";
 
 const CategorySkeleton = () => (
   <div className="flex flex-col gap-6">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BanglaDate from "./BanglaDate";
+import BanglaDate from "@/components/shared/BanglaDate";
 
 const Hero = () => {
   return (
