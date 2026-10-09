@@ -12,7 +12,7 @@ A Bangla market-price tracker for everyday essentials: rice, lentils, oil, veget
 [![daisyUI](https://img.shields.io/badge/daisyUI-5-5A0EF8?logo=daisyui&logoColor=white)](https://daisyui.com)
 [![Better Auth](https://img.shields.io/badge/Better_Auth-MongoDB-47A248?logo=mongodb&logoColor=white)](https://better-auth.com)
 
-[**🌐 Live Site**](#-links) · [**📦 Repository**](https://github.com/IFTI737/bazar-dor-2.0)
+[**🌐 Live Site**](https://bazar-dor-2-0-ifti.vercel.app/) · [**📦 Repository**](https://github.com/IFTI737/bazar-dor-2.0-ifti)
 
 </div>
 
@@ -113,7 +113,7 @@ Open [http://localhost:3000/](http://localhost:3000/).
 ## 🔗 Links
 
 - **Live Site:** [Bazar-Dor](https://bazar-dor-2-0-ifti.vercel.app/)
-- **Repository:** https://github.com/IFTI737/bazar-dor-2.0
+- **Repository:** https://github.com/IFTI737/bazar-dor-2.0-ifti
 
 ---
 
