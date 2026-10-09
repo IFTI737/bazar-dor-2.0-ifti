@@ -91,7 +91,7 @@ Create a `.env.local` file in the project root:
 BAZARDOR_API_URL=https://api.abcz.workers.dev/api/bazardor
 MONGODB_URI=your_mongodb_connection_string
 BETTER_AUTH_SECRET=a_long_random_string
-BETTER_AUTH_URL=http://localhost:3000
+BETTER_AUTH_URL=https://bazar-dor-2-0-ifti.vercel.app/
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GITHUB_CLIENT_ID=
@@ -99,8 +99,8 @@ GITHUB_CLIENT_SECRET=
 ```
 
 OAuth callback URLs:
-- Google: `http://localhost:3000/api/auth/callback/google`
-- GitHub: `http://localhost:3000/api/auth/callback/github`
+- Google: `https://bazar-dor-2-0-ifti.vercel.app/api/auth/callback/google`
+- GitHub: `https://bazar-dor-2-0-ifti.vercel.app/api/auth/callback/github`
 
 Then run:
 
