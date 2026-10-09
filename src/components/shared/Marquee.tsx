@@ -10,7 +10,7 @@ const Marquee = async () => {
 
   return (
     <div className="border-b border-base-300 bg-base-100 text-sm">
-      <MarqueeText duration={50} pauseOnHover textSpacing="0">
+      <MarqueeText direction="right" duration={50} pauseOnHover textSpacing="0">
         {products.map((p) => (
           <Link
             href={`/product/${p.slug}`}
