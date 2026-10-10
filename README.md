@@ -69,7 +69,7 @@ src/
 
 ## 📡 API
 
-Data comes from the main API `https://openapi.programming-hero.com/api/bazardor`. If it fails, the app tries `https://api.abcz.workers.dev/api/bazardor`, then `https://api.api-store.workers.dev/api/bazardor`, and asks the user to refresh only if all three fail:
+Data comes from the main API (`MAIN_API_URL`). If it fails, the app tries `BASE_URL_2`, then `BASE_URL_1`, and asks the user to refresh only if all three fail:
 
 | Endpoint | Returns |
 |---|---|
@@ -88,9 +88,9 @@ npm install
 Create a `.env.local` file in the project root:
 
 ```env
-MAIN_API_URL=https://openapi.programming-hero.com/api/bazardor
-BASE_URL_2=https://api.abcz.workers.dev/api/bazardor
-BASE_URL_1=https://api.api-store.workers.dev/api/bazardor
+MAIN_API_URL=your_main_api_url
+BASE_URL_2=your_second_api_url
+BASE_URL_1=your_third_api_url
 MONGODB_URI=your_mongodb_connection_string
 BETTER_AUTH_SECRET=a_long_random_string
 BETTER_AUTH_URL=http://localhost:3000
