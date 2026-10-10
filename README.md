@@ -69,7 +69,7 @@ src/
 
 ## 📡 API
 
-Data comes from `https://api.abcz.workers.dev/api/bazardor`:
+Data comes from the main API (`MAIN_API_URL`). If it fails, the app tries `BASE_URL_2`, then `BASE_URL_1`, and asks the user to refresh only if all three fail:
 
 | Endpoint | Returns |
 |---|---|
@@ -88,7 +88,9 @@ npm install
 Create a `.env.local` file in the project root:
 
 ```env
-BAZARDOR_API_URL=https://api.abcz.workers.dev/api/bazardor
+MAIN_API_URL=your_main_api_url
+BASE_URL_2=your_second_api_url
+BASE_URL_1=your_third_api_url
 MONGODB_URI=your_mongodb_connection_string
 BETTER_AUTH_SECRET=a_long_random_string
 BETTER_AUTH_URL=https://bazar-dor-2-0-ifti.vercel.app/
