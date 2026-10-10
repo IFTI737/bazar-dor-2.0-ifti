@@ -39,3 +39,12 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Chrome's customizable select sizes its menu to the button on first open, which wrapped long options on mobile */
+.select::picker(select) {
+  min-width: max-content;
+}
+
+.select option {
+  white-space: nowrap;
+}
