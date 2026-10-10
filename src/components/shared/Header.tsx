@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import BanglaDate from "./BanglaDate";
 import NavLinks from "./NavLinks";
 import NavList from "./NavList";
+import ThemeToggle from "./ThemeToggle";
 import UserInfo from "./UserInfo";
 import { getCategories } from "@/lib/api";
 
@@ -26,6 +27,7 @@ const Header = async () => {
 
         <div className="flex-1" />
 
+        <ThemeToggle />
         <UserInfo />
       </div>
 
