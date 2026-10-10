@@ -37,6 +37,9 @@ BazarDor shows today's prices for daily essentials, compares them across 12 mark
 | 🔐 | **Authentication & protected routes** | Better Auth with MongoDB: email/password, Google and GitHub sign-in. Product and profile pages are protected, and users return to the page they wanted after signing in. |
 | 👤 | **Profile & update information** | `/profile` shows the user's photo, name and email, and `/profile/update` lets them change their name. |
 | 🇧🇩 | **Bengali-first, responsive UI** | Bengali numerals (`১,৮৫০ টাকা`), a Bangla date in the navbar, skeleton loaders, friendly 404 pages and layouts for mobile, tablet and desktop. |
+| 🔍 | **Product search** | A search bar right after the banner filters products as you type, by Bangla name, slug or category, and links straight to each product page. |
+| 🌗 | **Light / dark mode** | A 🌙/☀️ toggle in the navbar switches themes. Light is the default, and the choice is remembered on the next visit. |
+| 🛡️ | **API fallback & error handling** | If the main API fails, the app tries two backup APIs in turn. If all three fail, a Bangla message asks the user to refresh, and every new request starts from the main API again. |
 
 ## 🛠️ Technologies Used
 
@@ -69,7 +72,14 @@ src/
 
 ## 📡 API
 
-Data comes from the main API (`MAIN_API_URL`). If it fails, the app tries `BASE_URL_2`, then `BASE_URL_1`, and asks the user to refresh only if all three fail:
+Data comes from three APIs whose URLs are set only in environment variables, never in the code:
+
+1. `MAIN_API_URL` is always tried first.
+2. If it errors or times out (8 seconds), the app tries `BASE_URL_2`.
+3. If that fails too, it tries `BASE_URL_1`.
+4. If all three fail, an error page shows "বাজার দরের তথ্য আনা যায়নি। পেজটি রিফ্রেশ করে আবার চেষ্টা করুন।" with a 🔄 রিফ্রেশ করুন button.
+
+Each request starts again from `MAIN_API_URL`, so the main API is used as soon as it is back. Endpoints:
 
 | Endpoint | Returns |
 |---|---|
