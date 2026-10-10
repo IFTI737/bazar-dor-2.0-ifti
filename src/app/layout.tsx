@@ -18,7 +18,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="bn"
       data-theme="bazardor"
       className="h-full antialiased"
+      suppressHydrationWarning
     >
+      <head>
+        {/* Apply the saved theme before the page paints so dark mode doesn't flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="bazardor-dark"}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-base-200 text-base-content">
         <Header />
         <Marquee />
